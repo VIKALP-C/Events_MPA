@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"Career Advising ","image":"https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951243.jpg?t=st=1763523921~exp=1763527521~hmac=f7e93c1e3904d041664e51fee15a096b58937ed6b1215a8c05a05c45afdcfca9&w=1480","date":"2025-12-18","description":"Welcome to our Career Advising Event,  Learn Directly from the Experts!","id":"69d0c087-24d2-48b5-b836-64c72fcefed8"},{"title":"New Event","image":"https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?_gl=1*562o6t*_ga*MTk1MTE3NDU3NS4xNzYzNDMwMDIy*_ga_8JE65Q40S6*czE3NjM0MzAwMjEkbzEkZzEkdDE3NjM0MzAxMzQkajU2JGwwJGgw","date":"2025-11-22","description":"sdcsdcsdcsdc","id":"fec577d8-b46a-4bab-99c5-ebf8a9a32b4b"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}

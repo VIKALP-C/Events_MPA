@@ -1,6 +1,11 @@
+import PageContent from "../components/PageContent";
+
 function HomePage(){
     return(
-        <h1>HomePage</h1>
+        <PageContent title="Welcome Here!">
+            <p>Browse All Our Local Events Here... !</p>
+        </PageContent>
+
     );
 }
 

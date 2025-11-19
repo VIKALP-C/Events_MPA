@@ -1,5 +1,3 @@
-// Challenge / Exercise
-
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
 //    - HomePage
 //    - EventsPage
@@ -24,12 +22,14 @@
 import {RouterProvider, createBrowserRouter } from 'react-router-dom'; 
 import HomePage from './Pages/Home';
 import EventsPage, { loader as eventsLoader} from './Pages/Events';
-import EventDetailPage, {loader as eventDetailLoader} from './Pages/EventDetails';
+import EventDetailPage, {loader as eventDetailLoader, action as deleteAction, } from './Pages/EventDetails';
 import NewEventPage from './Pages/NewEvent';
 import EditEventPage from './Pages/EditEvent';
 import RootLayout from './Pages/Root';
 import EventsRootLayout from './Pages/EventsRoot';
 import ErrorPage from './Pages/Error';
+import { action as manipulateEventAction } from './components/EventForm';
+import NewsletterPage, { action as newsletterAction } from './components/Newsletter';
 
 const router = createBrowserRouter([
   { path: '/', element: <RootLayout />,
@@ -37,13 +37,28 @@ const router = createBrowserRouter([
   children: [
   { index: true, element: <HomePage />},
   { path: 'events', element: <EventsRootLayout />, children:[
-  { index: true, element: <EventsPage />, 
+  { index: true, element: <EventsPage />,
     loader: eventsLoader,
-  }, 
-  { path: ':eventId', element: <EventDetailPage />, loader: eventDetailLoader,},
-  { path: 'new', element: <NewEventPage />},
-  { path: ':eventId/edit', element: <EditEventPage />},
+  },
+  {
+    path:':eventId',
+    id: 'event-detail',
+    loader:eventDetailLoader,
+     
+    children:[
+{ index: true, element: <EventDetailPage />, action: deleteAction, },
+{ path: 'edit', element: <EditEventPage />, action: manipulateEventAction }, 
+    ]
+  },
+  
+  { path: 'new', element: <NewEventPage />, action: manipulateEventAction },
+  
   ],},
+  {
+    path: 'newsletter',
+    element: <NewsletterPage />,
+    action: newsletterAction,
+  },
   
 ],
   },

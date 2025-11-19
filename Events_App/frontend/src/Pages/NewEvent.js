@@ -1,7 +1,13 @@
+
+import EventForm from "../components/EventForm";
+
 function NewEventPage(){
+
+
     return(
-        <h1>New Event page</h1>
+        <EventForm method="POST"/>
     );
 }
 
 export default NewEventPage; 
+
